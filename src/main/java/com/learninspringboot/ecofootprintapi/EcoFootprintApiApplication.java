@@ -28,29 +28,29 @@ public class EcoFootprintApiApplication implements CommandLineRunner {
 		LOG.info("Logging from application...");
 		LOG.warn("Warning from application...");
 		
-		repo.deleteAll();
-
-	    // save a couple of footprints
-	    repo.save(new EcoFootprint("Alice", "Smith", "1"));
-	    repo.save(new EcoFootprint("Bob", "Smith", "2"));
-
-	    // fetch all footprints
-	    LOG.info("Customers found with findAll():");
-	    LOG.info("-------------------------------");
-	    for (EcoFootprint ecoFootprint : repo.findAll()) {
-	      LOG.info("" + ecoFootprint);
-	    }
-
-	    // fetch an individual footprint
-	    LOG.info("Footprint found with findByFirstName('Alice'):");
-	    LOG.info("--------------------------------");
-	    LOG.info("" + repo.findByFirstName("Alice"));
-
-	    LOG.info("Footprints found with findByLastName('Smith'):");
-	    LOG.info("--------------------------------");
-	    for (EcoFootprint ecoFootprint : repo.findByLastName("Smith")) {
-	      LOG.info("" + ecoFootprint);
-	    }
+//		repo.deleteAll();
+//
+//	    // save a couple of footprints
+//	    repo.save(new EcoFootprint("Alice", "Smith", "1"));
+//	    repo.save(new EcoFootprint("Bob", "Smith", "2"));
+//
+//	    // fetch all footprints
+//	    LOG.info("Customers found with findAll():");
+//	    LOG.info("-------------------------------");
+//	    for (EcoFootprint ecoFootprint : repo.findAll()) {
+//	      LOG.info("" + ecoFootprint);
+//	    }
+//
+//	    // fetch an individual footprint
+//	    LOG.info("Footprint found with findByFirstName('Alice'):");
+//	    LOG.info("--------------------------------");
+//	    LOG.info("" + repo.findByFirstName("Alice"));
+//
+//	    LOG.info("Footprints found with findByLastName('Smith'):");
+//	    LOG.info("--------------------------------");
+//	    for (EcoFootprint ecoFootprint : repo.findByLastName("Smith")) {
+//	      LOG.info("" + ecoFootprint);
+//	    }
 	}
 
 }

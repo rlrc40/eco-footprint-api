@@ -1,8 +1,9 @@
 package com.learninspringboot.ecofootprintapi;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
+import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -39,5 +40,39 @@ public class EcoFootprintApiApplicationTests {
 		
 		assertEquals(2, service.listFootprints().size());
 	}
-	
+
+	@Test
+	public void getEcoFootprintByIdTest() {
+		String id = "1";
+		EcoFootprint ecoFootprint = new EcoFootprint("User Test", "1", UUID.randomUUID().toString());
+		when(repo.findById(id)).thenReturn(Optional.of(ecoFootprint));
+
+		Optional<EcoFootprint> serviceEcoFootprint = service.getFootprintById(id);
+		assertEquals(Optional.of(ecoFootprint), serviceEcoFootprint);
+	}
+
+	@Test
+	public void createFootprintTest() {
+		EcoFootprint ecoFootprint = new EcoFootprint("User Test", "1", UUID.randomUUID().toString());
+		when(repo.save(ecoFootprint)).thenReturn(ecoFootprint);
+
+		assertEquals(ecoFootprint, service.createFootprint(ecoFootprint));
+	}
+
+	@Test
+	public void updateFootprintTest() {
+		EcoFootprint ecoFootprint = new EcoFootprint("User Test", "1", UUID.randomUUID().toString());
+		when(repo.save(ecoFootprint)).thenReturn(ecoFootprint);
+
+		assertEquals(ecoFootprint, service.updateFootprint(ecoFootprint));
+	}
+
+	@Test
+	public void deleteFootprintTest() {
+		String id = "1";
+		EcoFootprint ecoFootprint = new EcoFootprint("User Test", "1", UUID.randomUUID().toString());
+		service.deleteFootprint("1");
+
+		verify(repo, times(1)).deleteById("1");
+	}
 }
