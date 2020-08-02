@@ -10,6 +10,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/eco-action")
+@CrossOrigin(origins = "http://localhost:8080")
 public class EcoActionController {
 
 	@Autowired
