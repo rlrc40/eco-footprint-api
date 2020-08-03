@@ -15,10 +15,13 @@ public class EcoAction {
 
     public Double co2e;
 
-    public EcoAction(String description, String depends, Double co2e) {
+    public Integer categoryType;
+
+    public EcoAction(String description, String depends, Double co2e, Integer categoryType) {
         this.description = description;
         this.depends = depends;
         this.co2e = co2e;
+        this.categoryType = categoryType;
     }
 
     public String getId() {
@@ -30,7 +33,7 @@ public class EcoAction {
     }
 
     public String getActionId() {
-        return actionId;
+         return actionId;
     }
 
     public void setActionId(String actionId) {
@@ -60,6 +63,12 @@ public class EcoAction {
     public void setCo2e(Double co2e) {
         this.co2e = co2e;
     }
+
+    public Integer getCategoryType() {
+        return categoryType;
+    }
+
+    public void setCategoryType(Integer categoryType) { this.categoryType = categoryType; }
 
 
 }
