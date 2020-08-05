@@ -39,13 +39,15 @@ public class EcoFootprintApiApplicationTests {
 						new EcoFootprint(
 								"User Test",
 								"1",
+								"ecoFootPrint1",
 								UUID.randomUUID().toString(),
-								new ArrayList<EcoAction>(Arrays.asList(new EcoAction("Transporte publico", null, 1.23, 2), new EcoAction("Coche Eléctrico", "Ciudad", 1.23, 2)))),
+								new ArrayList<>(Arrays.asList(new EcoAction("Transporte publico", null, 1.23, 2), new EcoAction("Coche Eléctrico", "Ciudad", 1.23, 2)))),
 						new EcoFootprint(
 								"User Test",
 								"2",
+								"ecoFootPrint2",
 								UUID.randomUUID().toString(),
-								new ArrayList<EcoAction>(Arrays.asList(new EcoAction("Transporte publico", null, 1.23, 2), new EcoAction("Coche Eléctrico", "Ciudad", 1.23, 2))))
+								new ArrayList<>(Arrays.asList(new EcoAction("Transporte publico", null, 1.23, 2), new EcoAction("Coche Eléctrico", "Ciudad", 1.23, 2))))
 				).collect(Collectors.toList())
 		);
 		
@@ -58,8 +60,9 @@ public class EcoFootprintApiApplicationTests {
 		EcoFootprint ecoFootprint = new EcoFootprint(
 				"User Test",
 				"1",
+				"ecoFootPrint1",
 				UUID.randomUUID().toString(),
-				new ArrayList<EcoAction>(Arrays.asList(new EcoAction("Transporte publico", null, 1.23, 2), new EcoAction("Coche Eléctrico", "Ciudad", 1.23, 2))));
+				new ArrayList<>(Arrays.asList(new EcoAction("Transporte publico", null, 1.23, 2), new EcoAction("Coche Eléctrico", "Ciudad", 1.23, 2))));
 		when(repo.findById(id)).thenReturn(Optional.of(ecoFootprint));
 
 		Optional<EcoFootprint> serviceEcoFootprint = service.getFootprintById(id);
@@ -71,8 +74,9 @@ public class EcoFootprintApiApplicationTests {
 		EcoFootprint ecoFootprint = new EcoFootprint(
 				"User Test",
 				"1",
+				"ecoFootPrint1",
 				UUID.randomUUID().toString(),
-				new ArrayList<EcoAction>(Arrays.asList(new EcoAction("Transporte publico", null, 1.23, 2), new EcoAction("Coche Eléctrico", "Ciudad", 1.23, 2))));
+				new ArrayList<>(Arrays.asList(new EcoAction("Transporte publico", null, 1.23, 2), new EcoAction("Coche Eléctrico", "Ciudad", 1.23, 2))));
 		when(repo.save(ecoFootprint)).thenReturn(ecoFootprint);
 
 		assertEquals(ecoFootprint, service.createFootprint(ecoFootprint));
@@ -83,8 +87,9 @@ public class EcoFootprintApiApplicationTests {
 		EcoFootprint ecoFootprint = new EcoFootprint(
 				"User Test",
 				"1",
+				"ecoFootPrint1",
 				UUID.randomUUID().toString(),
-				new ArrayList<EcoAction>(Arrays.asList(new EcoAction("Transporte publico", null, 1.23, 2), new EcoAction("Coche Eléctrico", "Ciudad", 1.23, 2))));
+				new ArrayList<>(Arrays.asList(new EcoAction("Transporte publico", null, 1.23, 2), new EcoAction("Coche Eléctrico", "Ciudad", 1.23, 2))));
 		when(repo.save(ecoFootprint)).thenReturn(ecoFootprint);
 
 		assertEquals(ecoFootprint, service.updateFootprint(ecoFootprint));
@@ -96,8 +101,9 @@ public class EcoFootprintApiApplicationTests {
 		EcoFootprint ecoFootprint = new EcoFootprint(
 				"User Test",
 				"1",
+				"ecoFootPrint1",
 				UUID.randomUUID().toString(),
-				new ArrayList<EcoAction>(Arrays.asList(new EcoAction("Transporte publico", null, 1.23, 2), new EcoAction("Coche Eléctrico", "Ciudad", 1.23, 2))));
+				new ArrayList<>(Arrays.asList(new EcoAction("Transporte publico", null, 1.23, 2), new EcoAction("Coche Eléctrico", "Ciudad", 1.23, 2))));
 		service.deleteFootprint("1");
 
 		verify(repo, times(1)).deleteById("1");

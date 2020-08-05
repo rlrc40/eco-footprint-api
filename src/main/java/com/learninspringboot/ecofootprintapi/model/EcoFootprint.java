@@ -11,13 +11,15 @@ public class EcoFootprint {
 	public String footprintId;
 	public String firstName;
 	public String lastName;
+	public String description;
 	public List<EcoAction> ecoActions;
 
 	public EcoFootprint() {}
 
-	public EcoFootprint(String firstName, String lastName, String footprintId, List<EcoAction> ecoActions) {
+	public EcoFootprint(String firstName, String lastName, String description, String footprintId, List<EcoAction> ecoActions) {
 		this.firstName = firstName;
 	    this.lastName = lastName;
+		this.description = description;
 	    this.footprintId = footprintId;
 	    this.ecoActions = ecoActions;
 	}
@@ -39,6 +41,12 @@ public class EcoFootprint {
 	}
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 
