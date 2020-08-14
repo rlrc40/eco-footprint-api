@@ -11,14 +11,16 @@ public class EcoFootprint {
 	public String footprintId;
 	public String firstName;
 	public String lastName;
+	public String photo;
 	public String description;
 	public List<EcoAction> ecoActions;
 
 	public EcoFootprint() {}
 
-	public EcoFootprint(String firstName, String lastName, String description, String footprintId, List<EcoAction> ecoActions) {
+	public EcoFootprint(String firstName, String lastName, String photo, String description, String footprintId, List<EcoAction> ecoActions) {
 		this.firstName = firstName;
 	    this.lastName = lastName;
+		this.photo = lastName;
 		this.description = description;
 	    this.footprintId = footprintId;
 	    this.ecoActions = ecoActions;
@@ -49,7 +51,13 @@ public class EcoFootprint {
 		this.description = description;
 	}
 
+	public String getPhoto() {
+		return photo;
+	}
 
+	public void setPhoto(String photo) {
+		this.photo = photo;
+	}
 
 	@Override
 	public String toString() {

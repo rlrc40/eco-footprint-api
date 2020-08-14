@@ -39,12 +39,14 @@ public class EcoFootprintApiApplicationTests {
 						new EcoFootprint(
 								"User Test",
 								"1",
+								"as123sd123s",
 								"ecoFootPrint1",
 								UUID.randomUUID().toString(),
 								new ArrayList<>(Arrays.asList(new EcoAction("Transporte publico", null, 1.23, 2), new EcoAction("Coche Eléctrico", "Ciudad", 1.23, 2)))),
 						new EcoFootprint(
 								"User Test",
 								"2",
+								"as123sd123s",
 								"ecoFootPrint2",
 								UUID.randomUUID().toString(),
 								new ArrayList<>(Arrays.asList(new EcoAction("Transporte publico", null, 1.23, 2), new EcoAction("Coche Eléctrico", "Ciudad", 1.23, 2))))
@@ -60,6 +62,7 @@ public class EcoFootprintApiApplicationTests {
 		EcoFootprint ecoFootprint = new EcoFootprint(
 				"User Test",
 				"1",
+				"as123sd123s",
 				"ecoFootPrint1",
 				UUID.randomUUID().toString(),
 				new ArrayList<>(Arrays.asList(new EcoAction("Transporte publico", null, 1.23, 2), new EcoAction("Coche Eléctrico", "Ciudad", 1.23, 2))));
@@ -74,6 +77,7 @@ public class EcoFootprintApiApplicationTests {
 		EcoFootprint ecoFootprint = new EcoFootprint(
 				"User Test",
 				"1",
+				"as123sd123s",
 				"ecoFootPrint1",
 				UUID.randomUUID().toString(),
 				new ArrayList<>(Arrays.asList(new EcoAction("Transporte publico", null, 1.23, 2), new EcoAction("Coche Eléctrico", "Ciudad", 1.23, 2))));
@@ -87,6 +91,7 @@ public class EcoFootprintApiApplicationTests {
 		EcoFootprint ecoFootprint = new EcoFootprint(
 				"User Test",
 				"1",
+				"as123sd123s",
 				"ecoFootPrint1",
 				UUID.randomUUID().toString(),
 				new ArrayList<>(Arrays.asList(new EcoAction("Transporte publico", null, 1.23, 2), new EcoAction("Coche Eléctrico", "Ciudad", 1.23, 2))));
@@ -101,6 +106,7 @@ public class EcoFootprintApiApplicationTests {
 		EcoFootprint ecoFootprint = new EcoFootprint(
 				"User Test",
 				"1",
+				"as123sd123s",
 				"ecoFootPrint1",
 				UUID.randomUUID().toString(),
 				new ArrayList<>(Arrays.asList(new EcoAction("Transporte publico", null, 1.23, 2), new EcoAction("Coche Eléctrico", "Ciudad", 1.23, 2))));
